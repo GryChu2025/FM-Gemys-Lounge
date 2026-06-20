@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -8,29 +9,28 @@
 <style>
 body{
 margin:0;
-padding:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#111,#222);
-color:white;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
-text-align:center;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#0d0d0d,#1f1f1f);
+color:white;
 }
 
 .card{
 width:90%;
-max-width:420px;
-background:rgba(255,255,255,0.08);
+max-width:450px;
+text-align:center;
+padding:40px;
 border-radius:25px;
-padding:30px;
-box-shadow:0 0 30px rgba(0,0,0,.4);
+background:rgba(255,255,255,0.08);
+box-shadow:0 0 30px rgba(0,0,0,.5);
 }
 
 .logo{
-font-size:70px;
-margin-bottom:10px;
+font-size:80px;
+margin-bottom:15px;
 }
 
 h1{
@@ -38,34 +38,35 @@ margin:0;
 font-size:32px;
 }
 
-p{
-color:#cccccc;
-margin-bottom:25px;
+.sub{
+color:#c0c0c0;
+margin-top:10px;
+margin-bottom:35px;
 }
 
-.play{
-background:#00b7ff;
-border:none;
-color:white;
-font-size:24px;
+.boton{
+display:block;
+background:#d4af37;
+color:#111;
+font-size:22px;
 font-weight:bold;
-padding:20px 40px;
+padding:20px;
 border-radius:50px;
-cursor:pointer;
-width:100%;
+text-decoration:none;
+transition:0.3s;
 }
 
-audio{
-width:100%;
-margin-top:20px;
+.boton:hover{
+transform:scale(1.05);
 }
 
 .footer{
-margin-top:20px;
+margin-top:25px;
 font-size:12px;
 color:#999;
 }
 </style>
+
 </head>
 
 <body>
@@ -76,11 +77,14 @@ color:#999;
 
 <h1>FM Gemys Lounge</h1>
 
-<p>La frecuencia de las buenas experiencias</p>
+<div class="sub">
+La frecuencia de las buenas experiencias
+</div>
 
-<audio id="radio" controls autoplay>
-<source src="http://45.182.223.219:8000/stream" type="audio/mpeg">
-</audio>
+<a class="boton"
+href="http://45.182.223.219:8000/stream"
+target="_blank">
+🎧 ESCUCHAR EN VIVO </a>
 
 <div class="footer">
 Música funcional para comercios • Lounge • Experiencias
