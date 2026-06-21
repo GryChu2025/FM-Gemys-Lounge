@@ -20,11 +20,10 @@ button{padding:15px 30px;font-size:18px}
 <div class="btn">👗 Tiendas</div>
 <div class="btn">🏨 Hoteles</div>
 <div class="btn">🚗 Viajeros</div>
-<div class="btn">🌙 Lounge</div><audio id="radio" controls>
-<source src="http://45.182.223.219:8000/stream" type="audio/mpeg">
-</audio>
+<div class="btn">🌙 Lounge</div><audio id="radio" src="http://45.182.223.219:8000/stream"></audio>
 
 <button onclick="document.getElementById('radio').play()">▶ Play</button>
+
 <button onclick="document.getElementById('radio').pause()">⏸ Pausa</button>
 <script>
 if ('serviceWorker' in navigator) {
