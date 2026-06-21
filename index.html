@@ -1,93 +1,34 @@
 
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FM Gemys Lounge</title>
-
+<title>FM Gemys</title>
+<link rel="manifest" href="manifest.json">
 <style>
-body{
-    background:#000;
-    color:#fff;
-    font-family:Arial,sans-serif;
-    text-align:center;
-    padding:20px;
-}
-
-.logo img{
-    width:300px;
-    max-width:90%;
-}
-
-.slogan{
-    color:#d4af37;
-    margin:15px 0 25px 0;
-}
-
-.btn{
-    display:block;
-    margin:10px auto;
-    padding:15px;
-    border:1px solid #d4af37;
-    border-radius:12px;
-    max-width:300px;
-    color:white;
-}
-
-.player-btn{
-    background:#d4af37;
-    color:black;
-    border:none;
-    border-radius:10px;
-    padding:15px 30px;
-    margin:10px;
-    font-size:18px;
-    cursor:pointer;
-}
-
-.live{
-    color:#ff4444;
-    font-weight:bold;
-    margin-top:15px;
-}
+body{background:#000;color:#fff;font-family:Arial,sans-serif;text-align:center;padding:20px}
+.logo{font-size:42px;color:#d4af37;font-weight:bold}
+.btn{display:block;margin:10px auto;padding:15px;border:1px solid #d4af37;border-radius:12px;max-width:300px}
+button{padding:15px 30px;font-size:18px}
 </style>
-
 </head>
-
 <body>
-
-<div class="logo">
-<img src="logo.png" alt="FM Gemys Lounge">
-</div>
-
-<div class="live">🔴 EN VIVO</div>
-
-<h2>FM Gemys Lounge</h2>
-
-<p class="slogan">
-La frecuencia de las buenas experiencias
-</p>
-
+<img src="logo.png" alt="FM Gemys Lounge" style="width:300px;max-width:90%;">
+<p>Música inteligente para cada negocio</p>
 <div class="btn">🍽️ Restaurantes</div>
 <div class="btn">🛒 Supermercados</div>
 <div class="btn">👗 Tiendas</div>
 <div class="btn">🏨 Hoteles</div>
 <div class="btn">🚗 Viajeros</div>
 <div class="btn">🌙 Lounge</div>
-
-<audio id="radio">
-<source src="http://45.182.223.219:8000/stream" type="audio/mpeg">
-</audio>
-
-<button class="player-btn"
-onclick="document.getElementById('radio').play()">
-▶ Play </button>
-
-<button class="player-btn"
-onclick="document.getElementById('radio').pause()">
-⏸ Pausa </button>
-
+<audio id="radio" src="http://45.182.223.219:8000/stream"></audio>
+<button onclick="document.getElementById('radio').play()">▶ Play</button>
+<button onclick="document.getElementById('radio').pause()">⏸ Pausa</button>
+<script>
+if ('serviceWorker' in navigator) {
+ navigator.serviceWorker.register('service-worker.js');
+}
+</script>
 </body>
 </html>
