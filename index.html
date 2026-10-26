@@ -1,74 +1,44 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gemys FM Virtual</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FM Gemys</title>
 <style>
-    body {
-        background: #000;
-        color: #fff;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        min-height: 100vh;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    h1 {
-        font-size: 38px;
-        letter-spacing: 3px;
-        margin-bottom: 40px;
-    }
-
-    .player {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-    }
-
-    button {
-        background: #d4af37;
-        color: #000;
-        border: none;
-        border-radius: 12px;
-        padding: 16px 30px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    button:hover {
-        opacity: 0.85;
-    }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #d4af37;
+  font-family: Arial, sans-serif;
+}
+h1 { letter-spacing: 3px; }
+.player { display: flex; gap: 12px; }
+button {
+  background: #d4af37;
+  color: #000;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px 24px;
+  font-size: 17px;
+  font-weight: bold;
+}
 </style>
 </head>
-
 <body>
-
-<h1>GEMYS FM VIRTUAL</h1>
-
-<audio id="radio">
-    <source src="https://45.182.223.219:8000/stream" type="audio/mpeg">
-</audio>
-
+<h1>FM GEMYS</h1>
 <div class="player">
-
-    <button onclick="document.getElementById('radio').play()">
-        ▶ PLAY
-    </button>
-
-    <button onclick="document.getElementById('radio').pause()">
-        ⏸ PAUSA
-    </button>
-
+<button onclick="document.getElementById('radio').play()">▶ PLAY</button>
+<button onclick="document.getElementById('radio').pause()">⏸ PAUSA</button>
 </div>
-
+<audio id="radio" preload="none">
+  <source src="http://45.182.223.219:8000/stream" type="audio/mpeg">
+</audio>
 </body>
 </html>
+
